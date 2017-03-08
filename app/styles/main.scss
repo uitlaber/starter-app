@@ -1,0 +1,21 @@
+// bower:scss
+@import '../bower_components/neutroncss/neutron.scss';
+@import '../bower_components/owl.carousel/src/scss/owl.carousel.scss';
+@import '../bower_components/owl.carousel/src/scss/owl.theme.default.scss';
+// endbower
+@import 'typography';
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box; /*Firefox 1-3*/
+  -webkit-box-sizing: border-box; /* Safari */
+}
+
+.container{
+  max-width: 1324px;
+  min-width: 1000px;
+  width: 100%;
+}
