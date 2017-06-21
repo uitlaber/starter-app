@@ -1,42 +1,318 @@
 <!doctype html>
 <html lang="">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <title>fond</title>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <!-- endbower -->
     <!-- endbuild -->
-
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-  </head>
-  <body>
-  <header>
-      <div class="container">
-          
-      </div>
-  </header>
-  
-   {% block content %}{% endblock %}
-    
+</head>
 
-    <footer>
-        
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <a href="#" class="logo"><img src="img/logo.png" alt="" class="img-responsive"></a>
+                    <div class="phone-single">
+                        <a href="#"><span>8 (800) 100-10-10</span></a>
+                        <p>Бесплатный номер по РФ</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 ">
+                    <div class="contacts">
+                        <div class="dropdown loc-switcher">
+                            <a id="dLabel" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Санкт-Петербург
+                  <span></span>
+                </a>
+                            <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                <li><a href="#"> Санкт-Петербург</a></li>
+                                <li><a href="#">Москва</a></li>
+                            </ul>
+                        </div>
+                        <div class="departament">
+                            <p><span>Отдел продаж:</span></p>
+                            <a href="" class="phone">8 (800) 100-10-10</a>
+                            <a href="" class="phone">8 (800) 100-10-10</a>
+                            <a href="#" class="email">sales@sitename.ru</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix hidden-lg"></div>
+                <div class="col-lg-6 col-xs-12 ">
+                    <div class="category-list">
+                        <h2>Виды крепежа, поставляемого компанией «********» по всей России и СНГ:</h2>
+                        <ul>
+                            <li><a href="#">Высокопрочный <br>крепеж</a></li>
+                            <li><a href="#" class="s">Машиностроительный <br>крепеж</a></li>
+                            <li><a href="#">Дюймовый <br>крепеж</a></li>
+                            <li><a href="#">С мелким шагом <br>резьбы крепеж</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Нержавеющий <br>крепеж</a></li>
+                            <li><a href="#">Латунный <br>крепеж</a></li>
+                            <li><a href="#">Полиамидный <br>крепеж</a></li>
+                            <li><a href="#">Приварной <br>крепеж</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav id="main-nav">
+        <div class="container">
+            <div class="grid">
+                <div class="menu-wrapper">
+                    <a href="#" class="burger"  onclick="openNav()"><i class="fa fa-align-justify" aria-hidden="true"></i></a>
+                    <ul class="menu">
+                        <li><a href="#">О компании </a></li>
+                        <li><a href="#">Контакты   </a></li>
+                        <li><a href="#">Производство по чертежам </a></li>
+                        <li><a href="#">Акции </a></li>
+                        <li><a href="#">Услуги</a></li>
+                        <li><a href="#">Доставка РФ </a></li>
+                        <li><a href="#">Информация </a></li>
+                        <li><a href="#">ГОСТ/ DIN/ ISO</a></li>
+                    </ul>
+                </div>
+                <div class="buttons text-right">
+                    <a href="#" class="quick-order">Быстрый заказ</a>
+                    <a href="#" class="search-toggle"></a>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="search-block">
+                <form action="">
+                    <input type="search" name="q" class="form-control">
+                    <button>искать</button>
+                    <a href="#" id="close-search"></a>
+                </form>
+            </div>
+            <!-- search-container -->
+        </div>
+        <div class="offcanvas-menu" id="mySidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <ul >
+                <li><a href="#">О компании </a></li>
+                <li><a href="#">Контакты   </a></li>
+                <li><a href="#">Производство по чертежам </a></li>
+                <li><a href="#">Акции </a></li>
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">Доставка РФ </a></li>
+                <li><a href="#">Информация </a></li>
+                <li><a href="#">ГОСТ/ DIN/ ISO</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-9  pull-right main-content">
+                {% block content %}{% endblock %}
+            </div>
+            <div class="col-xs-12 col-md-3">
+                <div class="catalog-menu">
+                    <h3>Каталог продукции</h3>
+                    <ul class="menu">
+                        <li><a href="#">РАСПРОДАЖА</a></li>
+                        <li><a href="#">Анкера</a></li>
+                        <li><a href="#">Болты</a></li>
+                        <li><a href="#">Винты</a></li>
+                        <li><a href="#">Гайки</a></li>
+                        <li class="current-menu-item"><a href="#">Заклепки</a></li>
+                        <li><a href="#">Кольца стопорные</a></li>
+                        <li><a href="#">Пресс масленки</a></li>
+                        <li><a href="#">Пробки резьбовые</a></li>
+                        <li><a href="#">Рукоятки</a></li>
+                        <li><a href="#">Саморезы</a></li>
+                        <li><a href="#">Такелаж</a></li>
+                        <li><a href="#">Хомуты</a></li>
+                        <li><a href="#">Шайбы</a></li>
+                        <li><a href="#">Шпильки</a></li>
+                        <li><a href="#">Шплинты</a></li>
+                        <li><a href="#">Шпонки</a></li>
+                        <li><a href="#">Штифты</a></li>
+                        <li><a href="#">Шурупы</a></li>
+                    </ul>
+                </div>
+                <!-- catalog-menu -->
+                <div class="discounts-carousel-wrapper">
+                    <h3>действующие акции</h3>
+                    <div class="owl-carousel discounts-carousel">
+                        <div>
+                            <h4>скидки от объёма! <br>бонусы клиенту!</h4>
+                            <img src="img/discount.png" alt="" class="img-responsive">
+                            <span class="old-price">21 500 р</span>
+                            <span class="new-price">14 999 р</span>
+                        </div>
+                        <div>
+                            <h4>скидки от объёма! <br>бонусы клиенту!</h4>
+                            <img src="img/discount.png" class="img-responsive" alt="">
+                            <span class="old-price">21 500 р</span>
+                            <span class="new-price">14 999 р</span>
+                        </div>
+                        <div>
+                            <h4>скидки от объёма! <br>бонусы клиенту!</h4>
+                            <img src="img/discount.png" alt="" class="img-responsive">
+                            <span class="old-price">21 500 р</span>
+                            <span class="new-price">14 999 р</span>
+                        </div>
+                    </div>
+                    <div class="carousel-bot">
+                        <div class="owl-nav-discount"></div>
+                        <a href="#" class="all-discount">» Смотреть все акции </a>
+                    </div>
+                </div>
+                <div class="discount-subscribe">
+                    <h3>подписаться на акции</h3>
+                    <form action="">
+                        <div class="form-group">
+                            <input type="text" placeholder="ФИО" name="name" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Название организации" name="organization" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Телефон" name="phone" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="E-mail" name="email" class="form-control">
+                        </div>
+                        <div class="form-group text-center">
+                            <button>подписаться</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- discount-subscribe -->
+                <div class="certificates">
+                    <h3>Cертификаты к отгрузке</h3>
+                    <a href="#"><img src="img/cf.png" alt="" class="img-responsive"></a>
+                </div>
+                <!-- certificates -->
+                <div class="transport-companies">
+                    <h3>Работаем с транспортными <br>компаниями в регионах</h3>
+                    <img src="img/transport_co.png" height="291" width="256" alt="">
+                    <a href="#" class="calc_link">рассчитать стоимость доставки</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="container">
+            <div class="line"></div>
+            <div class="row">
+                <div class="col-md-3">
+                    <a href="#" class="logo"><img src="img/footer_logo.png" alt=""></a>
+                    <div class="departament">
+                        <p><span>Отдел продаж:</span></p>
+                        <a href="" class="phone">8 (800) 100-10-10</a>
+                        <a href="" class="phone">8 (800) 100-10-10</a>
+                        <a href="#" class="email">sales@sitename.ru</a>
+                    </div>
+                    <!-- departament -->
+                    <div class="dropdown loc-switcher">
+                        <a id="dLabel" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Санкт-Петербург
+                  <span></span>
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="dLabel">
+                            <li><a href="#"> Санкт-Петербург</a></li>
+                            <li><a href="#">Москва</a></li>
+                        </ul>
+                    </div>
+                    <p class="city-address">Никольский переулок, д.4</p>
+                    <!-- loc-switcher -->
+                    <div class="phone-single">
+                        <a href="#"><span>8 (800) 100-10-10</span></a>
+                        <p>Бесплатный номер по РФ</p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="menu-wrapper">
+                        <h3>О компании</h3>
+                        <ul class="menu">
+                            <li><a href="#">Наши клиенты</a></li>
+                            <li><a href="#">Отзывы нагих клиентов</a></li>
+                            <li><a href="#">Оставить отзыв</a></li>
+                            <li><a href="#">Сертификаты</a></li>
+                            <li><a href="#">Поставщикам</a></li>
+                            <li><a href="#">Оставить заявку</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="menu-wrapper">
+                        <h3>Продукция</h3>
+                        <ul class="menu">
+                            <li><a href="#">Наши клиенты</a></li>
+                            <li><a href="#">Отзывы нагих клиентов</a></li>
+                            <li><a href="#">Оставить отзыв</a></li>
+                            <li><a href="#">Сертификаты</a></li>
+                            <li><a href="#">Поставщикам</a></li>
+                            <li><a href="#">Оставить заявку</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="menu-wrapper">
+                        <h3>Услуги</h3>
+                        <ul class="menu">
+                            <li><a href="#">Наши клиенты</a></li>
+                            <li><a href="#">Отзывы нагих клиентов</a></li>
+                            <li><a href="#">Оставить отзыв</a></li>
+                            <li><a href="#">Сертификаты</a></li>
+                            <li><a href="#">Поставщикам</a></li>
+                            <li><a href="#">Оставить заявку</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="menu-wrapper">
+                        <h3>Информация</h3>
+                        <ul class="menu">
+                            <li><a href="#">Наши клиенты</a></li>
+                            <li><a href="#">Отзывы нагих клиентов</a></li>
+                            <li><a href="#">Оставить отзыв</a></li>
+                            <li><a href="#">Сертификаты</a></li>
+                            <li><a href="#">Поставщикам</a></li>
+                            <li><a href="#">Оставить заявку</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- row -->
+            <div class="row copy">
+                <div class="col-md-4">
+                    <p class="company">Название компании. Все права защищены</p>
+                </div>
+                <div class="col-md-6">
+                    Копирование информации разрешено только с указанием ссылки на сайт
+                </div>
+                <div class="col-md-2">
+                    Copyright 2004-2016
+                </div>
+            </div>
+        </div>
     </footer>
- 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+    <script src="/bower_components/owl.carousel/dist/owl.carousel.js"></script>
+    <script src="/bower_components/offcanvas/dist/js/bootstrap.offcanvas.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-
-        <!-- build:js scripts/main.js -->
-        <script src="scripts/main.js"></script>
-        <!-- endbuild -->
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
 </body>
+
 </html>

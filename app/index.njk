@@ -1,7 +1,145 @@
-{% extends "layouts/default.njk" %}
-
-{% block content %}
-  <div class="container">
-    <h1>ПРивеит</h1>	
-  </div>
+{% extends "layouts/default.njk" %} {% block content %}
+<div class="owl-carousel main-carousel">
+    <div><img src="img/banner_1.png" alt=""></div>
+    <div><img src="img/banner_1.png" alt=""></div>
+    <div><img src="img/banner_1.png" alt=""></div>
+</div>
+<div class="owl-dots-main">
+    <div class="owl-dot active"><span>Разработка проектно-сметной <br>документации </span></div>
+    <div class="owl-dot"><span>Разработка проектно-сметной <br>документации</span></div>
+    <div class="owl-dot"><span>Разработка проектно-сметной <br>документации</span></div>
+</div>
+<div class="list-products-wrapper">
+    <h3><span>Лидеры продаж</span></h3>
+    <div class="list-products ">
+        {% include "inc/product-item.njk" %} {% include "inc/product-item.njk" %} {% include "inc/product-item.njk" %} {% include "inc/product-item.njk" %}
+    </div>
+    <!-- product-list -->
+</div>
+<!-- product-list-wrapper -->
+<div class="our-advantages">
+    <h2 class="checked-header"><span>Наши преимущества</span> </h2>
+    <p>Частное предприятие «Территория Мебели» - это успешно развивающаяся торговая сеть мебельных магазинов, созданная в 2012 году. Первый салон-магазин был открыт в ТЦ «Счастье» ст. м. «Восток», где предприятие предлагало продукцию пяти мебельных фабрик РБ, площадь выставочного зала составляла около 150 кв.м.</p>
+    <p>
+        <img src="img/advantages.png" class="img-responsive" alt="">
+    </p>
+    <p>
+        На сегодняшний день предприятие «Территория Мебели» - это современная развитая, пользующаяся все большей популярностью у покупателей сеть мебельных салонов. Для большего удобства наших клиентов в разных частях города расположены три выставочные площадки общей площадью более 1000 кв.м, предлагающие наибольший по городу ассортимент продукции: более 60 ведущих фабрик Беларуси и России размещают на наших площадях свою лучшую продукцию.
+    </p>
+</div>
+<div class="partner-carousel-wrapper">
+    <h2 class="checked-header"><span>клиенты нашей компании</span> </h2>
+    <div class="owl-carousel partner-carousel">
+        <div>
+            <img src="img/partner_1.png" alt="" class="img-responsive">
+        </div>
+        <div>
+            <img src="img/partner_2.png" alt="" class="img-responsive">
+        </div>
+        <div>
+            <img src="img/partner_3.png" alt="" class="img-responsive">
+        </div>
+        <div>
+            <img src="img/partner_4.png" alt="" class="img-responsive">
+        </div>
+        <div>
+            <img src="img/partner_5.png" alt="" class="img-responsive">
+        </div>
+        <div>
+            <img src="img/partner_5.png" alt="" class="img-responsive">
+        </div>
+    </div>
+    <!-- partner-carousel -->
+    <div class="owl-nav-partner">
+    </div>
+</div>
+<div class="reviews-wrapper">
+    <h2 class="reviews-header"><span>Отзывы клиентов</span> </h2>
+    <div class="review-list">
+        <div class="review-item">
+            <div class="text">
+                <p>«Всем доброго времени суток! Уже несколько месяцев использую данное средство и у меня сложилось мнение о данном продукте,с которым и хочу поделиться. Купила его ради любопытства и подкупило то,что оно не требует смывания, значит не такое химозное»</p>
+            </div>
+            <div class="info">
+                <div class="name">
+                    Константин Константинов
+                    <span>  Старший менеджер компании Apple </span>
+                </div>
+                <div class="photo">
+                    <img src="img/review_photo.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="review-item">
+            <div class="text">
+                <p>«Всем доброго времени суток! Уже несколько месяцев использую данное средство и у меня сложилось мнение о данном продукте,с которым и хочу поделиться. Купила его ради любопытства и подкупило то,что оно не требует смывания, значит не такое химозное»</p>
+            </div>
+            <div class="info">
+                <div class="name">
+                    Константин Константинов
+                    <span>  Старший менеджер компании Apple </span>
+                </div>
+                <div class="photo">
+                    <img src="img/review_photo.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- review-item -->
+        <div class="review-item">
+            <div class="text">
+                <p>«Всем доброго времени суток! Уже несколько месяцев использую данное средство и у меня сложилось мнение о данном продукте,с которым и хочу поделиться. Купила его ради любопытства и подкупило то,что оно не требует смывания, значит не такое химозное»</p>
+            </div>
+            <div class="info">
+                <div class="name">
+                    Константин Константинов
+                    <span>  Старший менеджер компании Apple </span>
+                </div>
+                <div class="photo">
+                    <img src="img/review_photo.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- review-item -->
+    </div>
+    <!-- review-list -->
+    <div class="text-right">
+        <a href="#" class="all-reviews"> » Все отзывы</a>
+    </div>
+</div>
+<!-- reviews-wrapper -->
+<div class="rating-block-wrapepr">
+    <h3>Для оценки нашего сервиса, просим оставить вас отзыв</h3>
+    <div class="rating-block">
+        <div class="rating-item thanks">
+            <a href="#">сказать <br>спасибо!</a>
+            <span class="name">Благодарностей </span>
+            <span class="count">1418</span>
+        </div>
+        <div class="rating-item wish">
+            <a href="#">оставить <br>пожелание</a>
+            <span class="name">Пожеланий </span>
+            <span class="count">36</span>
+        </div>
+        <div class="rating-item complaint">
+            <a href="#">написать <br>жалобу</a>
+            <span class="name">Жалоб </span>
+            <span class="count">15</span>
+        </div>
+    </div>
+</div>
+<!-- rating-block-wrapepr -->
+<div class="news-list-wrapper">
+    <h2 class="news-header"><span>Материал для специалистов отдела снабжения</span> </h2>
+    <div class="news-list">
+       {% include 'inc/news-item.njk' %}
+       {% include 'inc/news-item.njk' %}
+       {% include 'inc/news-item.njk' %}
+       {% include 'inc/news-item.njk' %}
+       {% include 'inc/news-item.njk' %}
+       {% include 'inc/news-item.njk' %}
+       {% include 'inc/news-item.njk' %}
+       {% include 'inc/news-item.njk' %}
+       {% include 'inc/news-item.njk' %}
+    </div>
+</div>
 {% endblock %}

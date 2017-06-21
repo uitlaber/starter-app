@@ -1,0 +1,143 @@
+.list-products-wrapper {
+    padding: 20px 0;
+    >h3 {
+        margin: 0;
+        span {
+            background: #e61a31 url(../img/corner_list.png) no-repeat right 0;
+            color: #fff;
+            font-family: "mb";
+            font-size: 18px;
+            font-weight: 400;
+            text-transform: uppercase;
+            line-height: 31px;
+            padding: 0 15px;
+            display: inline-block;
+            padding-right: 80px;
+            position: relative;
+            &:after {
+                content: "";
+                width: 14px;
+                height: 19px;
+                background: url(../img/hot_white.png) no-repeat;
+                position: absolute;
+                right: 56px;
+                top: 5px;
+            }
+        }
+    }
+    .list-products {
+        @include columns(2);
+        border-top: 1px solid #e6e6e6;
+        border-right: 1px solid #e6e6e6;
+        .product-item {
+            @include columns((2, 3));
+            border-left: 1px solid #e6e6e6;
+            border-bottom: 1px solid #e6e6e6;
+
+
+            .left {
+                padding: 18px 0 18px 15px;
+                .buttons {
+                	max-width: 155px;
+                    .fast-order {
+                    	margin-bottom: 5px;
+                    	width: 155px;
+                        color: #e61a31;
+                        font-family: "mb";
+                        font-size: 14px;
+                        font-weight: 400;
+                        text-transform: uppercase;
+                        line-height: 28px;
+                        height: 28px;
+                        border: 1px solid #ebe9eb;
+                        border-radius: 5px;
+                        display: block;
+                        background: url(../img/molnya.png) no-repeat 10px 5px;
+                        padding-left: 22px;
+                        &:hover {
+                            background: #e7132e url(../img/molnya_white.png) no-repeat 10px 5px;
+                            color: #fff;
+                            text-decoration: none;
+                            border-color: #e7132e;
+                        }
+                    }
+                    .readmore {
+                    	width: 155px;
+                        color: #000;
+                        font-family: "mb";
+                        font-size: 14px;
+                        font-weight: 400;
+                        text-transform: uppercase;
+                        line-height: 28px;
+                        height: 28px;
+                        border: 1px solid #ebe9eb;
+                        border-radius: 5px;
+                        display: block;
+                        text-align: center;
+                        &:hover{
+                        	text-decoration: none;
+                        	background: #007e7e;
+                        	color: #fff;
+                        	border-color: #007e7e;
+                        	 text-shadow: 1px 1px 1px rgba(0, 0, 0, .8);
+                        	 border-bottom: 2px solid #021d1d;
+                        }
+                    }
+                }
+            }
+            .right {
+                padding: 18px;
+                line-height: 14px;
+                .name {
+                    font-family: "mb";
+                    text-transform: uppercase;
+                    font-size: 18px;
+                    color: #000;
+                    margin-bottom: 10px;
+                    line-height: 18px;
+                }
+                .desc {
+                    font-size: 14px;
+                }
+                .analogs {
+                    p {
+                        font-family: 'mb';
+                        font-size: 14px;
+                        margin-bottom: 0;
+                    }
+                    ul {
+                        list-style: none;
+                        font-size: 14px;
+                    }
+                }
+                .fields {
+                    p {
+                        font-family: 'mb';
+                        font-size: 14px;
+                        margin-bottom: 0;
+                    }
+                    ul {
+                        list-style: none;
+                        font-size: 14px;
+                    }
+                }
+            }
+
+              @media(max-width: 460px){
+	        	 @include columns(1);
+
+	        	 .left{
+	        	 	padding: 10px;
+	        	 	text-align: center;
+	        	 	.buttons{
+	        	 		    margin: 0 auto;
+	        	 	}
+	        	 }
+	        }
+        }
+
+        @media(max-width: 1120px){
+        	 @include columns(1);
+        }
+    }
+}
